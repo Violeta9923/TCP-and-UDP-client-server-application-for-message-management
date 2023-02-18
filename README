@@ -1,0 +1,18 @@
+Violeta Fasui 324 CA
+Aplicatie client-server TCP si UDP pentru gestionarea mesajelor
+
+   Am realizat un protocol care trimite unor clienti de tip TCP mesaje
+trimise de la clienti de tip UDP.
+    Fiecare mesaj are o anumita topica la care clientul TCP trebuie sa fie 
+abonat ca sa poata primi informatia. Am realizat acest lucru folosind un cod
+in stilul laboratorului de TCP si al celor de UDP.
+    server.c constituie protocolul serverului, in care realizez conexiunile cu
+clientii, prin socketi. Aditional, am utils.h si utils.c. In utils.h am
+structura 'client' pe care le folosesc in tema si care contine toate datele 
+unui client. In utils.c am realizat functiile de parsare a textului primit
+de la UDP-uri in functie de tipurl acestuia.
+    Singurul 'neajuns' considerabil al temei este acela ca in client am un 
+camp, SF, care retine 0 sau 1, dupa caz. Acesta este unul singur valabil pt 
+toate topicurile la care clientul este abonat. Si daca la abonarea la un topic
+Sf un devine 0, atunci va ramane 0 pentru toate topicurile la care clientul este 
+abonat.
